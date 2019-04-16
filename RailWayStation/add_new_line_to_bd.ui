@@ -1,7 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>add_new_line_to_bd</class>
  <widget class="QDialog" name="add_new_line_to_bd">
   <property name="geometry">
@@ -15,12 +13,19 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">add_new_line_to_bd { 
+	height: 200px; 
+	background: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 192, 203, 255), stop:1 rgba(176, 224, 230, 255)); 
+	background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 192, 203, 255), stop:1 rgba(247,202,103, 255)); 
+}</string>
+  </property>
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>270</x>
      <y>240</y>
-     <width>341</width>
+     <width>101</width>
      <height>32</height>
     </rect>
    </property>
@@ -28,11 +33,68 @@
     <enum>Qt::Horizontal</enum>
    </property>
    <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+    <set>QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_select_file">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>50</y>
+     <width>111</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Выбрать файл</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_path">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>120</y>
+     <width>311</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="dragEnabled">
+    <bool>true</bool>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="placeholderText">
+    <string>Путь к файлу</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_fileName">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>160</y>
+     <width>311</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Имя в базе</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>240</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Добавть</string>
    </property>
   </widget>
  </widget>
- <pixmapfunction/>
  <resources/>
  <connections>
   <connection>
